@@ -7,6 +7,7 @@ import {
   ArrowRight, BookOpen, Layers, History, Users
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import WorkflowDiagram from '@/components/workflow/WorkflowDiagram';
 
 const UserEducation = () => {
   useEffect(() => {
@@ -34,6 +35,16 @@ const UserEducation = () => {
               </p>
             </motion.div>
           </div>
+
+          {/* Workflow diagram */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-16"
+          >
+            <WorkflowDiagram />
+          </motion.div>
 
           {/* Main content */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

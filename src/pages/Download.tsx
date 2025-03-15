@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Download as DownloadIcon, Shield, CheckCircle, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import DownloadSection from '@/components/download/DownloadSection';
+import WorkflowDiagram from '@/components/workflow/WorkflowDiagram';
 
 const Download = () => {
   useEffect(() => {
@@ -27,12 +28,22 @@ const Download = () => {
                 <Shield className="mr-1.5 h-4 w-4" />
                 Protection Tool
               </span>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Integrity Checker Application</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">KEY INTEGRITY CHECKER Application</h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
                 Download our integrity checker application to protect your system by detecting unauthorized file modifications.
               </p>
             </motion.div>
           </div>
+
+          {/* Workflow diagram */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-16"
+          >
+            <WorkflowDiagram />
+          </motion.div>
 
           {/* Download section */}
           <DownloadSection />
