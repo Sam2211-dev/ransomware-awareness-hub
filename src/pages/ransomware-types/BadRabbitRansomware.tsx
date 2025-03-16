@@ -1,10 +1,9 @@
 
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import PageTransition from '@/components/ui/PageTransition';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, BadgeAlert, Shield, FileWarning, Clock, Building } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const BadRabbitRansomware = () => {
   useEffect(() => {
@@ -35,7 +34,13 @@ const BadRabbitRansomware = () => {
   ];
 
   return (
-    <PageTransition>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ type: 'tween', ease: 'anticipate', duration: 0.4 }}
+      className="min-h-[calc(100vh-64px)]"
+    >
       <div className="py-16 md:py-24">
         <div className="max-width-wrapper page-padding">
           {/* Header */}
@@ -89,7 +94,7 @@ const BadRabbitRansomware = () => {
                 <p className="text-muted-foreground leading-relaxed">{section.content}</p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Attack flow diagram */}
           <motion.div
@@ -143,7 +148,7 @@ const BadRabbitRansomware = () => {
           </div>
         </div>
       </div>
-    </PageTransition>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageTransition from '@/components/ui/PageTransition';
@@ -35,7 +34,13 @@ const MazeRansomware = () => {
   ];
 
   return (
-    <PageTransition>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
+      transition={{ type: 'tween', ease: 'anticipate', duration: 0.4 }}
+      className="min-h-[calc(100vh-64px)]"
+    >
       <div className="py-16 md:py-24">
         <div className="max-width-wrapper page-padding">
           {/* Header */}
@@ -165,7 +170,7 @@ const MazeRansomware = () => {
           </div>
         </div>
       </div>
-    </PageTransition>
+    </motion.div>
   );
 };
 
