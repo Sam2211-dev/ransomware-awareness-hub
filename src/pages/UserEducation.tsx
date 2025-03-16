@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import PageTransition from '@/components/ui/PageTransition';
 import { Button } from '@/components/ui/button';
 import { 
-  ArrowRight, BookOpen, Layers, History, Users
+  ArrowRight, BookOpen, Layers, History, Users, 
+  ShieldCheck, AlertTriangle, LockKeyhole, Brain, 
+  Laptop, FileWarning, Shield
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import WorkflowDiagram from '@/components/workflow/WorkflowDiagram';
 
 const UserEducation = () => {
   useEffect(() => {
@@ -36,14 +37,51 @@ const UserEducation = () => {
             </motion.div>
           </div>
 
-          {/* Workflow diagram */}
+          {/* Key Topics Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mb-16"
           >
-            <WorkflowDiagram />
+            <div className="bg-black/80 p-8 rounded-xl text-white">
+              <h2 className="text-2xl font-bold mb-6 text-center flex items-center justify-center">
+                <ShieldCheck className="mr-2 h-6 w-6 text-primary" /> 
+                Key Topics in Ransomware Education
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-zinc-800/60 p-6 rounded-lg">
+                  <div className="flex items-center mb-3">
+                    <AlertTriangle className="h-6 w-6 text-amber-500 mr-3" />
+                    <h3 className="text-lg font-semibold">Understanding the Threat</h3>
+                  </div>
+                  <p className="text-zinc-300">
+                    Learn how ransomware attacks work and why they are becoming increasingly common in today's digital landscape.
+                  </p>
+                </div>
+                
+                <div className="bg-zinc-800/60 p-6 rounded-lg">
+                  <div className="flex items-center mb-3">
+                    <LockKeyhole className="h-6 w-6 text-primary mr-3" />
+                    <h3 className="text-lg font-semibold">Protection Strategies</h3>
+                  </div>
+                  <p className="text-zinc-300">
+                    Discover best practices for securing your systems and data against ransomware attacks through preventive measures.
+                  </p>
+                </div>
+                
+                <div className="bg-zinc-800/60 p-6 rounded-lg">
+                  <div className="flex items-center mb-3">
+                    <Brain className="h-6 w-6 text-purple-400 mr-3" />
+                    <h3 className="text-lg font-semibold">Response Preparation</h3>
+                  </div>
+                  <p className="text-zinc-300">
+                    Prepare effective response strategies to minimize damage and recover quickly in case of a ransomware attack.
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           {/* Main content */}
@@ -118,25 +156,76 @@ const UserEducation = () => {
             </motion.div>
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              Education is the first step in ransomware defense. Understanding how these attacks work 
-              helps you recognize and prevent them before they compromise your systems.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild variant="outline">
-                <Link to="/introduction/how-works">
-                  How Ransomware Works
-                </Link>
-              </Button>
-              <Button asChild>
-                <Link to="/mitigation">
-                  Mitigation Strategies
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+          {/* Bottom section with additional resources */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-16"
+          >
+            <div className="bg-card border border-border rounded-xl p-8">
+              <h2 className="text-2xl font-bold mb-6 flex items-center">
+                <Laptop className="mr-3 h-6 w-6 text-primary" />
+                Additional Resources
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="flex items-start">
+                  <div className="mr-4 mt-1">
+                    <FileWarning className="h-5 w-5 text-amber-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2">How Ransomware Works</h3>
+                    <p className="text-muted-foreground">
+                      Understand the technical aspects of ransomware attacks and their infection vectors.
+                    </p>
+                    <Button asChild variant="link" className="px-0 mt-2">
+                      <Link to="/introduction/how-works">
+                        Learn About Attack Vectors
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="mr-4 mt-1">
+                    <Shield className="h-5 w-5 text-green-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2">Protection Strategies</h3>
+                    <p className="text-muted-foreground">
+                      Explore comprehensive approaches to protect your systems from ransomware attacks.
+                    </p>
+                    <Button asChild variant="link" className="px-0 mt-2">
+                      <Link to="/mitigation">
+                        View Protection Methods
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center mt-6">
+                <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+                  Education is the first step in ransomware defense. Understanding how these attacks work 
+                  helps you recognize and prevent them before they compromise your systems.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Button asChild variant="outline">
+                    <Link to="/introduction/how-works">
+                      How Ransomware Works
+                    </Link>
+                  </Button>
+                  <Button asChild>
+                    <Link to="/mitigation">
+                      Mitigation Strategies
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </PageTransition>
