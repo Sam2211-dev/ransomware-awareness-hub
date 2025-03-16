@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Download as DownloadIcon, Shield, CheckCircle, AlertTriangle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import DownloadSection from '@/components/download/DownloadSection';
-import WorkflowDiagram from '@/components/workflow/WorkflowDiagram';
 
 const Download = () => {
   useEffect(() => {
@@ -34,16 +33,6 @@ const Download = () => {
               </p>
             </motion.div>
           </div>
-
-          {/* Workflow diagram */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-16"
-          >
-            <WorkflowDiagram />
-          </motion.div>
 
           {/* Download section */}
           <DownloadSection />
