@@ -1,8 +1,7 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Maze, Shield, Database, Building, FileWarning } from 'lucide-react';
+import { ArrowLeft, Workflow, Shield, Database, Building, FileWarning } from 'lucide-react';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/ui/PageTransition';
 
@@ -15,7 +14,7 @@ const MazeRansomware = () => {
     {
       title: "Introduction to Maze",
       content: "Maze ransomware, first identified in late 2019, is known for its unique double extortion model. This model not only encrypts a victim's files but also threatens to publish or leak stolen data if the ransom is not paid. By targeting both data access and privacy, Maze has introduced a new level of pressure on victims, making it one of the more formidable ransomware threats in the cybersecurity landscape.",
-      icon: <Maze className="h-6 w-6 text-purple-500" />
+      icon: <Workflow className="h-6 w-6 text-purple-500" />
     },
     {
       title: "Double Extortion Tactics",
@@ -61,7 +60,7 @@ const MazeRansomware = () => {
             <div className="px-8 pb-8">
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-4 rounded-xl bg-purple-500/10 text-purple-500 border border-purple-200">
-                  <Maze className="h-12 w-12" />
+                  <Workflow className="h-12 w-12" />
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold">The Maze Ransomware</h1>
@@ -125,7 +124,7 @@ const MazeRansomware = () => {
               
               <div className="bg-purple-600/20 backdrop-blur-sm p-6 rounded-xl border border-purple-300/30">
                 <h3 className="text-xl font-semibold mb-4 flex items-center">
-                  <Maze className="h-5 w-5 text-purple-300 mr-2" />
+                  <Workflow className="h-5 w-5 text-purple-300 mr-2" />
                   Maze Double Extortion
                 </h3>
                 <ul className="space-y-3 text-purple-100">

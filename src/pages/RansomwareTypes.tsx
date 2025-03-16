@@ -1,11 +1,10 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageTransition from '@/components/ui/PageTransition';
 import { Button } from '@/components/ui/button';
 import { 
   ArrowRight, ArrowLeft, Shield, AlertTriangle,
-  Puzzle, BadgeAlert, Maze, Eye,
+  Puzzle, BadgeAlert, Workflow, Eye,
   Database, Globe, Building, Key
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -47,7 +46,7 @@ const RansomwareTypes = () => {
       id: "maze",
       name: "The Maze",
       tagline: "Pioneers of Double Extortion",
-      icon: <Maze className="h-8 w-8" />,
+      icon: <Workflow className="h-8 w-8" />,
       color: "bg-purple-500/10 text-purple-500 border-purple-200",
       glowColor: "shadow-purple-500/20",
       description: "Not only encrypts files but also steals data and threatens to publish it if ransom isn't paid."
