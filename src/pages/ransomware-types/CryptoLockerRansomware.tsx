@@ -89,7 +89,7 @@ const CryptoLockerRansomware = () => {
                 <p className="text-muted-foreground leading-relaxed">{section.content}</p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Evolution timeline */}
           <motion.div
