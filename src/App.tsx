@@ -25,6 +25,14 @@ import Prevention from "./pages/Prevention";
 import CybercrimeAwareness from "./pages/CybercrimeAwareness";
 import Download from "./pages/Download";
 
+// Ransomware Type Detail Pages
+import JigsawRansomware from "./pages/ransomware-types/JigsawRansomware";
+import WannaCryRansomware from "./pages/ransomware-types/WannaCryRansomware";
+import BadRabbitRansomware from "./pages/ransomware-types/BadRabbitRansomware";
+import MazeRansomware from "./pages/ransomware-types/MazeRansomware";
+import CryptoLockerRansomware from "./pages/ransomware-types/CryptoLockerRansomware";
+import GoldenEyeRansomware from "./pages/ransomware-types/GoldenEyeRansomware";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -48,6 +56,14 @@ const App = () => (
             <Route path="/user-education/types" element={<RansomwareTypes />} />
             <Route path="/user-education/history" element={<RansomwareHistory />} />
             <Route path="/user-education/victim-perspective" element={<VictimPerspective />} />
+            
+            {/* Ransomware Type Detail Routes */}
+            <Route path="/user-education/types/jigsaw" element={<JigsawRansomware />} />
+            <Route path="/user-education/types/wannacry" element={<WannaCryRansomware />} />
+            <Route path="/user-education/types/badrabbit" element={<BadRabbitRansomware />} />
+            <Route path="/user-education/types/maze" element={<MazeRansomware />} />
+            <Route path="/user-education/types/cryptolocker" element={<CryptoLockerRansomware />} />
+            <Route path="/user-education/types/goldeneye" element={<GoldenEyeRansomware />} />
             
             {/* Mitigation Routes */}
             <Route path="/mitigation" element={<Mitigation />} />
