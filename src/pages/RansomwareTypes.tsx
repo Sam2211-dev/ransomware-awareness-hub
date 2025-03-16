@@ -29,7 +29,7 @@ const RansomwareTypes = () => {
       sections: [
         {
           title: "History and Background",
-          content: "Jigsaw ransomware, named after the infamous character from the "Saw" movie franchise, first emerged in early 2016. Its creator utilized a distinct and menacing approach to threats, markedly different from typical ransomware. Jigsaw gained notoriety for its particularly aggressive tactics, including the promise to delete files at regular intervals if the ransom was not paid, demonstrating a psychological manipulation tactic designed to pressure victims."
+          content: "Jigsaw ransomware, named after the infamous character from the \"Saw\" movie franchise, first emerged in early 2016. Its creator utilized a distinct and menacing approach to threats, markedly different from typical ransomware. Jigsaw gained notoriety for its particularly aggressive tactics, including the promise to delete files at regular intervals if the ransom was not paid, demonstrating a psychological manipulation tactic designed to pressure victims."
         },
         {
           title: "Characteristics and Methods of Operation",
