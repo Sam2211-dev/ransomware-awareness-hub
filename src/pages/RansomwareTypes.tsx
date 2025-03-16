@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import PageTransition from '@/components/ui/PageTransition';
@@ -6,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { 
   ArrowRight, ArrowLeft, Shield, AlertTriangle, 
   FileText, Lock, Key, BadgeAlert, Skull, Clock,
-  Database, Globe, Building, FileWarning, Virus
+  Database, Globe, Building, FileWarning, Bug
 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -282,7 +281,7 @@ const RansomwareTypes = () => {
                       >
                         <div className="flex items-center gap-3 mb-2">
                           {sectionIndex === 0 && <Lock className={`h-5 w-5 ${type.color.split(' ')[1]}`} />}
-                          {sectionIndex === 1 && <Virus className={`h-5 w-5 ${type.color.split(' ')[1]}`} />}
+                          {sectionIndex === 1 && <Bug className={`h-5 w-5 ${type.color.split(' ')[1]}`} />}
                           {sectionIndex === 2 && <FileWarning className={`h-5 w-5 ${type.color.split(' ')[1]}`} />}
                           {sectionIndex === 3 && <Clock className={`h-5 w-5 ${type.color.split(' ')[1]}`} />}
                           <h3 className="text-xl font-semibold">{section.title}</h3>
