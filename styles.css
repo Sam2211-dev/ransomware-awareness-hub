@@ -399,6 +399,91 @@ button {
   color: var(--muted-foreground);
 }
 
+/* Content Sections */
+.section {
+  padding: 5rem 0;
+  scroll-margin-top: 80px; /* For smooth scrolling with fixed header */
+}
+
+.bg-light {
+  background-color: var(--secondary);
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.text-content {
+  background-color: var(--card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.text-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.text-content p {
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.text-content .list {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-content .list li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+.text-content ol.list {
+  list-style-type: decimal;
+}
+
+.related-topics {
+  background-color: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.related-topics h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.related-topics ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.related-topics a {
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.related-topics a:hover {
+  text-decoration: underline;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
 /* Download Section */
 .download {
   padding: 5rem 0;
@@ -702,8 +787,30 @@ button {
     display: none;
   }
   
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--background);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
   .mobile-menu-button {
     display: block;
+  }
+
+  .section-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .related-topics {
+    position: static;
+    margin-top: 1.5rem;
   }
 }
 
@@ -715,4 +822,8 @@ button {
   .footer-about {
     grid-column: span 2;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
