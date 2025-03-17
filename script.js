@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (mobileMenuButton && navLinks) {
     mobileMenuButton.addEventListener('click', function() {
       navLinks.classList.toggle('active');
+      console.log('Mobile menu toggled');
     });
   }
   
